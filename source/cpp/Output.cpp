@@ -12,3 +12,8 @@ int Output::get_number_of_neurons()
 {
 	return m_number_of_neurons;
 }
+
+std::string Output::get_activaton_type()
+{
+	return m_activation_function;
+}

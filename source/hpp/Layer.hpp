@@ -19,5 +19,6 @@ public:
 
 	static std::map<std::string, ACTIVATION_TYPE> activation_type_map;
 	virtual int get_number_of_neurons() = 0;
+	virtual std::string get_activaton_type() = 0;
 private:
 };

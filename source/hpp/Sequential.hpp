@@ -3,6 +3,7 @@
 #include<Input.hpp>
 #include<Dense.hpp>
 #include<Output.hpp>
+#include<Activation.hpp>
 #include<vector>
 
 class Sequential: public Model
@@ -19,7 +20,9 @@ private:
 	std::vector<Eigen::VectorXd> data;
 	std::vector<Eigen::MatrixXd> weight;
 	std::vector<Eigen::VectorXd> bias;
-
+	std::vector<ActivationFunction*> activation;
+	Eigen::VectorXd m_y_train;
 	void forward_propagation();
+	void write_to_file();
 };
 

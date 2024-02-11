@@ -1,4 +1,5 @@
 include_directories(${CMAKE_SOURCE_DIR}/thirdParty/eigen-3.4.0)
+include_directories(${CMAKE_SOURCE_DIR}/thirdParty/sciplot)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../hpp)
 
 
@@ -9,5 +10,4 @@ add_executable(NN
      ${SRCS_HPP}
      ${SRCS_CPP}
 )
-
 install(TARGETS NN DESTINATION ${CMAKE_SOURCE_DIR}/exe)
