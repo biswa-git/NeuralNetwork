@@ -85,20 +85,21 @@ void Sequential::forward_propagation()
 		std::cout << "-------------------------------------" << std::endl;
 #endif // DEBUG
 
-		
-	std::ofstream myfile;
-	for (size_t i = 0; i < m_layers.size(); i++)
-	{
-		for (size_t j = 0; j < data[i].size(); j++)
+
+		std::ofstream myfile;
+		for (size_t i = 0; i < m_layers.size(); i++)
 		{
-			myfile.open("layer_" + std::to_string(i) + "_neuron_" + std::to_string(j) + ".txt", std::ios::out | std::ios::app);
-			myfile << data[0][0] << " " << data[i][j] << std::endl;
-			myfile.close();
+			for (size_t j = 0; j < data[i].size(); j++)
+			{
+				myfile.open("layer_" + std::to_string(i) + "_neuron_" + std::to_string(j) + ".txt", std::ios::out | std::ios::app);
+				myfile << data[0][0] << " " << data[i][j] << std::endl;
+				myfile.close();
+			}
 		}
 	}
 }
 
 void Sequential::write_to_file()
-{
+	{
 
-}
+	}
